@@ -27,7 +27,7 @@ header{
   left: 0;
   width: 100%;
   padding: 1rem 9%;
-  background-color: rgb(27, 25, 25);
+  background-color: transparent;
   filter: drop-shadow(10px);
   display: flex;
   justify-content: space-between;
@@ -66,12 +66,16 @@ section{
   padding: 5rem 9% 5rem;
 }
 
+
+
 .home{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8rem;
   background-color: black;
+  min-height: 100vh;
+  padding: 5rem 9% 5rem;
 }
 
 .home .home-content h1{
@@ -135,6 +139,11 @@ span{
 
 .typing-text span{
   position: relative;
+}
+
+.info{
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 @media (max-width: 1000px){
