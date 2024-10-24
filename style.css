@@ -61,25 +61,24 @@ nav a:hover {
 }
 
 .profile-img {
-  margin: 50px 75px 0 -50px;
   width: 300px;
-  height: 300px;
+  height: auto;
+  max-width: 100%; /* Rajoittaa kuvan maksimikoon ruudun leveydelle */
   border-radius: 50%;
   z-index: 1;
 }
 
+
 .UniOulu {
   max-width: 100%;
-  margin: 75px 0 0 50px;
-  width: auto;
-  height: 250px;
+  height: 150px; /* Pienennä kuvaa pienemmillä näytöillä */
   object-fit: cover;
-  z-index: 1;
+  margin-top: 20px;
 }
 
 .hero {
   position: relative;
-  height: 70vh;
+  min-height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,23 +88,21 @@ nav a:hover {
 }
 
 .intro {
-  position: relative;
-  width: 70%;
-  height: 70%;
   display: flex;
-  padding: 50px;
-  font-size: 20px;
-  margin: 65px auto;
-}
-.intro-content {
-  margin-right: 50px;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Muutetaan sisältö pystysuuntaiseksi pienemmillä näytöillä */
   align-items: center;
-  background-color: rgb(21, 21, 58);
-  text-align: center;
+  width: 90%;
+  height: auto;
+  padding: 20px;
+  margin: 0 auto;
 }
+
+.intro-content {
+  margin: 20px 0;
+  text-align: center;
+  background-color: rgb(21, 21, 58);
+}
+
 .intro h1 {
   font-size: 50px;
   position: relative;
@@ -115,13 +112,15 @@ nav a:hover {
 .intro p {
   font-size: 1.6rem;
   background-color: #b74b4b;
-  width: 100%; /* Leveys mukautuu kontainerin kokoon */
+  width: 100%;
   padding: 10px;
   justify-content: center;
   display: flex;
+  flex-direction: column;
   border-radius: 40%;
   opacity: 90%;
 }
+
 @media (max-width: 600px) {
   body {
     font-size: 1.4rem;
@@ -145,16 +144,13 @@ nav a:hover {
 
   .intro {
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     height: auto;
     padding: 20px;
-    margin: 0 auto;
   }
 
   .profile-img {
-    margin: 20px auto;
     width: 200px;
-    height: 200px;
   }
 
   .intro-content {
@@ -174,7 +170,7 @@ nav a:hover {
   
   .UniOulu {
     margin: 20px auto;
-    width: 150px;
+    width: 100px;
     height: auto;
   }
 }
@@ -183,12 +179,10 @@ nav a:hover {
   background-color: rgb(228, 215, 215);
   padding: 50px;
   font-size: 20px;
-  margin: 65px auto;
 }
 
 .about {
   background-color: rgb(117, 113, 113);
   padding: 50px;
   font-size: 20px;
-  margin: 65px auto;
 }
