@@ -32,6 +32,7 @@ header{
   justify-content: space-between;
   align-items: center;
   z-index: 10;
+  opacity: 80%
 }
 
 nav a{
@@ -68,8 +69,9 @@ nav a:hover {
 }
 
 .UniOulu {
+  max-width: 100%;
   margin: 75px 0 0 50px;
-  width: auto; /* Aseta kuvan leveys */
+  width: auto;
   height: 250px;
   object-fit: cover;
   z-index: 1;
@@ -121,6 +123,49 @@ nav a:hover {
   border-radius: 40%;
   opacity: 90%;
 }
+
+@media (max-width: 800px) {
+  .hero {
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-column-gap: 1em;
+    grid-template-areas:
+      "img title"
+      "img subtitle";
+    grid-template-columns: min-content max-content;
+  }
+
+  .profile-img {
+    grid-area: img;
+    min-width: 200px;
+    height: auto;
+    position: flex;
+    z-index: 2;
+  }
+
+  .UniOulu {
+    grid-area: img;
+    min-width: 150px;
+    height: auto;
+    position: flex;
+    z-index: 2;
+  }
+
+  .intro p {
+    align-self: start;
+    grid-column: -1 / 1;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    left: -1.5em;
+    width: calc(100% + 1.5em);
+  }
+
+
+}
+
+
 
 .skills {
   background-color: rgb(228, 215, 215);
