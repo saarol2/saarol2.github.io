@@ -13,6 +13,8 @@ html{
 }
 
 body{
+  width: 100%;
+  height: 75vh;
   overflow-x: hidden;
   background-color: black;
   color: white;
@@ -111,15 +113,70 @@ nav a:hover {
 }
 
 .intro p {
-  font-size: 20px;
+  font-size: 1.6rem;
   background-color: #b74b4b;
-  width: 350%; 
-  height: 40px;
+  width: 100%; /* Leveys mukautuu kontainerin kokoon */
+  padding: 10px;
   justify-content: center;
   display: flex;
-  flex-direction: column;
   border-radius: 40%;
   opacity: 90%;
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 1.4rem;
+  }
+  
+  .header {
+    padding: 1rem;
+  }
+
+  .nav a {
+    font-size: 1.6rem;
+    margin-left: 2rem;
+  }
+
+  .hero {
+    height: auto;
+    padding: 20px;
+    display: block;
+    text-align: center;
+  }
+
+  .intro {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .profile-img {
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+  }
+
+  .intro-content {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro p {
+    font-size: 1.6rem;
+    width: 100%;
+  }
+  
+  .UniOulu {
+    margin: 20px auto;
+    width: 150px;
+    height: auto;
+  }
 }
 
 .skills {
