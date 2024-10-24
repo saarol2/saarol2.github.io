@@ -13,8 +13,6 @@ html{
 }
 
 body{
-  width: 100%;
-  height: 75vh;
   overflow-x: hidden;
   background-color: black;
   color: white;
@@ -123,49 +121,6 @@ nav a:hover {
   border-radius: 40%;
   opacity: 90%;
 }
-
-@media (max-width: 800px) {
-  .hero {
-    display: grid;
-    width: min-content;
-    margin: 0 auto;
-    grid-column-gap: 1em;
-    grid-template-areas:
-      "img title"
-      "img subtitle";
-    grid-template-columns: min-content max-content;
-  }
-
-  .profile-img {
-    grid-area: img;
-    min-width: 200px;
-    height: auto;
-    position: flex;
-    z-index: 2;
-  }
-
-  .UniOulu {
-    grid-area: img;
-    min-width: 150px;
-    height: auto;
-    position: flex;
-    z-index: 2;
-  }
-
-  .intro p {
-    align-self: start;
-    grid-column: -1 / 1;
-    grid-row: 2;
-    text-align: right;
-    position: relative;
-    left: -1.5em;
-    width: calc(100% + 1.5em);
-  }
-
-
-}
-
-
 
 .skills {
   background-color: rgb(228, 215, 215);
