@@ -88,19 +88,22 @@ nav a:hover {
 }
 
 .intro {
+  position: relative;
+  width: 70%;
+  height: 70%;
   display: flex;
-  flex-direction: column; /* Muutetaan sisältö pystysuuntaiseksi pienemmillä näytöillä */
-  align-items: center;
-  width: 90%;
-  height: auto;
-  padding: 20px;
-  margin: 0 auto;
+  padding: 50px;
+  font-size: 20px;
+  margin: 65px auto;
 }
-
 .intro-content {
-  margin: 20px 0;
-  text-align: center;
+  margin-right: 50px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: rgb(21, 21, 58);
+  text-align: center;
 }
 
 .intro h1 {
@@ -110,10 +113,10 @@ nav a:hover {
 }
 
 .intro p {
-  font-size: 1.6rem;
+  font-size: 20px;
   background-color: #b74b4b;
-  width: 100%;
-  padding: 10px;
+  width: 350%; 
+  height: 40px;
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -143,10 +146,13 @@ nav a:hover {
   }
 
   .intro {
-    flex-direction: column;
-    width: 100%;
+    display: flex;
+    flex-direction: column; /* Muutetaan sisältö pystysuuntaiseksi pienemmillä näytöillä */
+    align-items: center;
+    width: 90%;
     height: auto;
     padding: 20px;
+    margin: 0 auto;
   }
 
   .profile-img {
@@ -165,7 +171,14 @@ nav a:hover {
 
   .intro p {
     font-size: 1.6rem;
+    background-color: #b74b4b;
     width: 100%;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40%;
+    opacity: 90%;
   }
   
   .UniOulu {
