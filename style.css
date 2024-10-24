@@ -109,11 +109,19 @@ nav a:hover {
   text-align: center;
 }
 
+@keyframes colorChange {
+  0% { color: #00EFF6; }
+  50% { color: #FF507D; }
+  100% { color: #00EFF6; }
+}
+
 .intro h1 {
   font-size: 50px;
   position: relative;
   bottom: 30px;
-  background-color: #b74b4b;
+  font-family:'Courier New', Courier, monospace;
+  animation: colorChange 3s infinite;
+  background-color: black;
 }
 
 .intro p {
@@ -129,7 +137,24 @@ nav a:hover {
   border: 2px black solid;
 }
 
-@media (max-width: 600px) {
+/*For screens between 800 and 1600 pixels wide*/
+@media (min-width: 800px) and (max-width: 1600px) {
+  .profile-img {
+    margin-left: -10vw;
+  }
+  
+  .UniOulu {
+    margin-right: -10vw;
+  }
+
+  .intro p {
+    width: 200%;
+  }
+}
+
+
+/*For screens less than 800 pixels wide*/
+@media (max-width: 800px) {
   body {
     font-size: 1.4rem;
   }
@@ -170,8 +195,8 @@ nav a:hover {
 
   .intro h1 {
     font-size: 2.5rem;
-    padding-top: 30px;
     margin-bottom: -20px;
+    margin-top: 25px;
   }
 
   .intro p {
