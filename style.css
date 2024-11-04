@@ -13,10 +13,10 @@ html{
 }
 
 body{
+  background-color: rgb(44, 44, 44);
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  background-color: black;
   color: white;
 }
 
@@ -34,6 +34,18 @@ header{
   z-index: 10;
   opacity: 80%
 }
+
+.finnish-flag, .english-flag {
+  background-size: cover;
+  border: 1px solid black;
+  height: 40px;
+  width: auto;
+}
+.finnish-flag {
+  width: 60px;
+  margin-right: 10px;
+}
+
 
 nav a{
   font-size: 1.8rem;
@@ -246,8 +258,11 @@ nav a:hover {
 .skills-title {
   font-size: 4rem;
   text-align: center;
-  margin: 50px 0;
+  margin: 50px auto;
   font-weight: 700;
+  border-bottom: 3px solid #b74b4b;
+  display: block;
+  width: fit-content;
 }
 
 .skills-content {
@@ -268,6 +283,7 @@ nav a:hover {
   font-weight: 700;
   font-size: 1.5rem;
   margin-bottom: 10px;
+  
 }
 
 .distinct-skill img {
@@ -277,14 +293,12 @@ nav a:hover {
 }
 
 .skills{
-  /*border-top: 3px black solid;*/
   background-color: transparent;
   padding-bottom: 50px;
   font-size: 20px;
 }
 
 .about {
-  background-color: rgb(44, 44, 44);
   padding: 50px 0 200px 0;
   font-size: 20px;
   display: flex;
@@ -298,9 +312,7 @@ nav a:hover {
   margin-bottom: 50px;
   font-weight: 700;
   border-bottom: 3px solid #b74b4b;
-  max-width: 300px;
-  
-
+  display: inline-block;
 }
 
 .about p {
@@ -325,11 +337,72 @@ nav a:hover {
 }
 
 .projects {
-  background-color: rgb(44, 44, 44);
   padding: 50px 0;
   font-size: 20px;
+  text-align: center;
+}
+
+.projects h2 {
+  margin-bottom: 50px;
+  border-bottom: 3px solid #b74b4b;
+  display: inline-block;
+}
+
+.projects-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  padding: 0 50px;
+}
+
+.project-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 20px;
+  margin: 20px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.project-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.upper-part {
+  transition: background-color 1s ease;
+}
+
+.upper-part.show {
+  background-color: black;
+}
+
+.upper-part .intro,
+.upper-part .skills,
+.upper-part.show .gradient {
+  transition: opacity 1s ease;
+}
+
+.upper-part.show .intro,
+.upper-part.show .skills,
+.upper-part.show .hero{
+  opacity: 0;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+figcaption {
+  background-color: #b74b4b;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 5px;
+  width: 100%;
 }

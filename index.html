@@ -9,91 +9,149 @@
 </head>
 <body>
   <header>
-    <a href="#" class="logo">Oliver Saari</a>
+    <a class="languages">
+      <img src="./img/finnish-flag.jpg" alt="Finnish flag" class="finnish-flag">
+      <img src="./img/english-flag.webp" alt="English flag" class="english-flag">
+    </a>
 
     <nav>
-        <a href="#intro" > Home</a>
+        <a href="#home" > Home</a>
         <a href="#skills" >Skills</a>
         <a href="#about" >About me</a>
-        <a href="#contact" >Contact</a>
+        <a href="#projects" >Projects</a>
     </nav>
   </header>
-  <section class="gradient">
-    <section class="hero">
-      <div class="intro">
-        <img src="./img/main.jpg" alt="Picture of me" class="profile-img">
-        <div class="intro-content">
-          <h1>Oliver Saari</h1>
-          <p>3rd year Computer Science and Engineering student</p>
+  <section class="upper-part">
+    <div class="black-overlay"></div>
+    <section class="gradient">
+      <section class="hero" id="home">
+        <div class="intro">
+          <img src="./img/main.jpg" alt="Picture of me" class="profile-img">
+          <div class="intro-content">
+            <h1>Oliver Saari</h1>
+            <p>3rd year Computer Science and Engineering student</p>
+          </div>
+          <img src="./img/UniOulu.jpg" alt="University of Oulu Logo" class="UniOulu">
         </div>
-        <img src="./img/UniOulu.jpg" alt="University of Oulu Logo" class="UniOulu">
+      </section>
+
+      <section  class="skills" id="skills">
+        <h2 class="skills-title">Skills</h2>
+        <div class="skills-content">
+
+          <div class ="distinct-skill">
+            <h3>Python</h3>
+            <img src="./img/python.jpg" alt="Python Logo">
+          </div>
+
+          <div class ="distinct-skill">
+            <h3>Java</h3>
+            <img src="./img/java.jpg" alt="Java Logo">
+          </div>
+          <div class ="distinct-skill">
+            <h3>JavaScript</h3>
+            <img src="./img/javascript.jpg" alt="JavaScript Logo">
+          </div>
+
+          <div class ="distinct-skill">
+            <h3>C</h3>
+            <img src="./img/c.jpg" alt="C Logo">
+          </div>
+
+          <div class ="distinct-skill">
+            <h3>HTML</h3>
+            <img src="./img/html.jpg" alt="HTML Logo">
+          </div>
+
+          <div class ="distinct-skill">
+            <h3>CSS</h3>
+            <img src="./img/css.jpg" alt="CSS Logo">
+          </div>
+
+          <div class ="distinct-skill">
+            <h3>Visual Studio Code</h3>
+            <img src="./img/vscode.jpg" alt="VS Code Logo">
+          </div>
+
+          <div class ="distinct-skill">
+            <h3>Git</h3>
+            <img src="./img/git.jpg" alt="Git Logo">
+          </div>
+
+          <div class ="distinct-skill">
+            <h3>SQL</h3>
+            <img src="./img/sql.png" alt="SQL Logo">
+          </div>
+
+        </div>
+      </section>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>Hi! I'm Oliver Saari, a 3rd year Computer Science and Engineering student at the University of Oulu. I'm interested in software development and I'm always eager to learn new things. I have experience in programming with Python, Java, JavaScript, C, HTML, CSS and SQL. I'm also familiar with Visual Studio Code and Git. I'm currently looking for a summer job or an internship in the field of software development. </p>
+        <P>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</P>
       </div>
     </section>
 
-    <section  class="skills">
-      <h2 class="skills-title">Skills</h2>
-      <div class="skills-content">
+    <section class="projects" id="projects">
+      <h2>My projects</h2>
+      <div class="projects-content">
+        <a class="project-item" href="https://github.com/saarol2/Tamagotchi" target="_blank">
+          <img src="./img/tamagotchi.jpg" alt="Tamagotchi image" class="project-img">
+          <figcaption>Tamagotchi (C)</figcaption>
+        </a>
 
-        <div class ="distinct-skill">
-          <h3>Python</h3>
-          <img src="./img/python.jpg" alt="Python Logo">
-        </div>
+        <a class="project-item" href="https://github.com/saarol2/Minesweeper" target="_blank">
+          <img src="./img/minesweeper.jpg" alt="Minesweeper image" class="project-img" >
+          <figcaption>Minesweeper (Python)</figcaption>
+        </a>
 
-        <div class ="distinct-skill">
-          <h3>Java</h3>
-          <img src="./img/java.jpg" alt="Java Logo">
-        </div>
-        <div class ="distinct-skill">
-          <h3>JavaScript</h3>
-          <img src="./img/javascript.jpg" alt="JavaScript Logo">
-        </div>
+        <a class="project-item" href="https://github.com/saarol2/bloglist-frontend" target="_blank">
+          <img src="./img/bloglist.jpg" alt="Bloglist web application image" class="project-img">
+          <figcaption>Bloglist web application (JavaScript)</figcaption>
+        </a>
 
-        <div class ="distinct-skill">
-          <h3>C</h3>
-          <img src="./img/c.jpg" alt="C Logo">
-        </div>
-
-        <div class ="distinct-skill">
-          <h3>HTML</h3>
-          <img src="./img/html.jpg" alt="HTML Logo">
-        </div>
-
-        <div class ="distinct-skill">
-          <h3>CSS</h3>
-          <img src="./img/css.jpg" alt="CSS Logo">
-        </div>
-
-        <div class ="distinct-skill">
-          <h3>Visual Studio Code</h3>
-          <img src="./img/vscode.jpg" alt="VS Code Logo">
-        </div>
-
-        <div class ="distinct-skill">
-          <h3>Git</h3>
-          <img src="./img/git.jpg" alt="Git Logo">
-        </div>
-
-        <div class ="distinct-skill">
-          <h3>SQL</h3>
-          <img src="./img/sql.png" alt="SQL Logo">
-        </div>
-
+        <a class="project-item" href="https://github.com/saarol2/programming-3" target="_blank">
+          <img src="./img/server-api.jpg" alt="Tamagotchi" class="project-img">
+          <figcaption>Server API (Java)</figcaption>
+        </a>
       </div>
     </section>
   </section>
 
-  <section class="about">
-    <div class="about-content">
-      <h2>About Me</h2>
-      <p>Hi! I'm Oliver Saari, a 3rd year Computer Science and Engineering student at the University of Oulu. I'm interested in software development and I'm always eager to learn new things. I have experience in programming with Python, Java, JavaScript, C, HTML, CSS and SQL. I'm also familiar with Visual Studio Code and Git. I'm currently looking for a summer job or an internship in the field of software development. </p>
-    </div>
-  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const projectItems = document.querySelectorAll('.project-item');
+    const upperPart = document.querySelector('.upper-part');
 
-  <section class="projects">
-    <h2>My projects</h2>
+    function checkVisibility() {
+        let anyVisible = false;
 
-    </div>
-  </section>
+        projectItems.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+            
+            if (isVisible) {
+                item.classList.add('show');
+                anyVisible = true;
+            } else {
+                item.classList.remove('show');
+            }
+        });
+
+        if (anyVisible) {
+            upperPart.classList.add('show');
+        } else {
+            upperPart.classList.remove('show');
+        }
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility();
+});
+</script>
 
   <section class="contact">
     <h2>Contact Me</h2>
