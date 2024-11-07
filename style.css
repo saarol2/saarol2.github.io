@@ -1,10 +1,26 @@
+:root {
+  --bg-dark: rgb(44, 44, 44);
+  --bg-black: rgba(0, 0, 0, 0.8);
+  --bg-light-grey: #EFEFEF;
+  --text-white: white;
+  --highlight-color: #6cb2d8;
+  --gradient-light-gray: rgb(82, 81, 81);
+  --gradient-white: white;
+  --gradient-black: black;
+  --animation-color1: #00EFF6;
+  --animation-color2: #FF507D;
+  --dark-blue: #1A2E46
+}
+
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   border: none;
   outline: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Arial', sans-serif;
+  text-decoration: none;
 }
 
 html{
@@ -13,12 +29,15 @@ html{
 }
 
 body{
-  background-color: rgb(44, 44, 44);
+  background-color: var(--dark-blue);
+  color: var(--text-white);
   width: 100%;
   height: 100%;
   overflow-x: hidden;
   color: white;
 }
+
+/*Header*/
 
 header{
   position: fixed;
@@ -26,13 +45,12 @@ header{
   left: 0;
   width: 100%;
   padding: 1rem 5%;
-  background-color: black;
+  background-color: var(--bg-black);
   filter: drop-shadow(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 10;
-  opacity: 80%
 }
 
 .finnish-flag, .english-flag {
@@ -40,7 +58,10 @@ header{
   border: 1px solid black;
   height: 40px;
   width: auto;
+  opacity: 1;
+  z-index: 11;
 }
+
 .finnish-flag {
   width: 60px;
   margin-right: 10px;
@@ -49,7 +70,7 @@ header{
 
 nav a{
   font-size: 1.8rem;
-  color: white;
+  color: var(--text-white);
   margin-left: 4rem;
   font-weight: 500;
   transition: 0.3s ease;
@@ -57,20 +78,11 @@ nav a{
 }
 
 nav a:hover {
-  color: #b74b4b;
-  border-bottom: 3px solid #b74b4b;
+  color: var(--highlight-color);
+  border-bottom: 3px solid var(--highlight-color);
 }
 
-.logo{
-  font-size: 32px;
-  color: #b74b4b;
-  font-weight: 800;
-  transition: 0.5s ease;
-}
-
-.logo:hover{
-  transform: scale(1.1);
-}
+/*Hero Section*/
 
 .profile-img {
   margin-right: 75px;
@@ -111,10 +123,13 @@ nav a:hover {
 }
 
 .gradient {
-  background-image: url('./img/hero_background3.jpg');
   background-size: cover;
   background-position: center;
-  background: linear-gradient(to bottom, white 25%, rgb(82, 81, 81) 35%, black 50%, rgb(44, 44, 44) 90%);
+  background: linear-gradient(
+    to bottom,
+    var(--gradient-white) 25%,
+    var(--dark-blue) 70%
+  );
 }
 
 .intro {
@@ -138,9 +153,9 @@ nav a:hover {
 }
 
 @keyframes colorChange {
-  0% { color: #00EFF6; }
-  50% { color: #FF507D; }
-  100% { color: #00EFF6; }
+  0% { color: var(--animation-color1); }
+  50% { color: var(--animation-color2); }
+  100% { color: var(--animation-color1); }
 }
 
 .intro h1 {
@@ -149,7 +164,7 @@ nav a:hover {
   bottom: 30px;
   font-family:'Courier New', Courier, monospace;
   animation: colorChange 3s infinite;
-  background-color: black;
+  background-color: var(--gradient-black);
   padding: 0 15px;
   border-radius: 40px;
   opacity: 90%;
@@ -157,7 +172,7 @@ nav a:hover {
 
 .intro p {
   font-size: 20px;
-  background-color: black;
+  background-color: var(--gradient-black);
   width: 350%; 
   height: 40px;
   justify-content: center;
@@ -255,12 +270,14 @@ nav a:hover {
   }
 }
 
+/*Skills Section*/
+
 .skills-title {
   font-size: 4rem;
   text-align: center;
   margin: 50px auto;
   font-weight: 700;
-  border-bottom: 3px solid #b74b4b;
+  border-bottom: 3px solid var(--highlight-color);
   display: block;
   width: fit-content;
 }
@@ -298,6 +315,8 @@ nav a:hover {
   font-size: 20px;
 }
 
+/*About Section*/
+
 .about {
   padding: 50px 0 200px 0;
   font-size: 20px;
@@ -311,7 +330,7 @@ nav a:hover {
   font-size: 3rem;
   margin-bottom: 50px;
   font-weight: 700;
-  border-bottom: 3px solid #b74b4b;
+  border-bottom: 3px solid var(--highlight-color);
   display: inline-block;
 }
 
@@ -331,10 +350,12 @@ nav a:hover {
   border-image:
     linear-gradient(
       to bottom, 
-      red, 
+      rgb(148, 158, 180), 
       rgba(0, 0, 0, 0)
     ) 1 100%;
 }
+
+/*Projects Section*/
 
 .projects {
   padding: 50px 0;
@@ -344,7 +365,7 @@ nav a:hover {
 
 .projects h2 {
   margin-bottom: 50px;
-  border-bottom: 3px solid #b74b4b;
+  border-bottom: 3px solid var(--highlight-color);
   display: inline-block;
 }
 
@@ -364,7 +385,8 @@ nav a:hover {
   margin: 20px;
   opacity: 0;
   transform: translateY(100px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.3s ease-out;
+  
 }
 
 .project-item.show {
@@ -373,36 +395,101 @@ nav a:hover {
 }
 
 .upper-part {
-  transition: background-color 1s ease;
+  transition: background-color 0.6s ease, opacity 0.6s ease;
 }
 
 .upper-part.show {
-  background-color: black;
+  background-color: var(--bg-light-grey);
 }
 
-.upper-part .intro,
-.upper-part .skills,
-.upper-part.show .gradient {
-  transition: opacity 1s ease;
+.upper-part.show  h2 {
+  color: black;
+  border-bottom: 3px solid var(--dark-blue);
+  }
+
+  .upper-part.show  p {
+    color: black;
+    }
+
+.intro,
+.skills,
+.gradient
+.about {
+  transition: opacity 0.6s ease, background-color 0.6s ease;
 }
 
 .upper-part.show .intro,
 .upper-part.show .skills,
-.upper-part.show .hero{
+.upper-part.show .gradient {
   opacity: 0;
 }
 
 .project-img {
   width: 100%;
-  height: auto;
-  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-item:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 figcaption {
-  background-color: #b74b4b;
-  color: white;
+  background-color: var(--dark-blue);
+  color: var(--bg-light-grey);
   font-size: 1.5rem;
   font-weight: 700;
   padding: 5px;
   width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid black;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*Footer*/
+
+.footer {
+  background-color: var(--dark-blue);
+  color: var(--text-white);
+  padding: 7em 0;
+  text-align: center;
+  min-height: 200px;
+  padding-bottom: 50px;
+}
+
+.footer h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  border-bottom: 3px solid var(--highlight-color);
+  display: inline-block;
+}
+.footer h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  font-size: 4rem;
+  margin: 0 10px;
+  color: var(--text-white);
+  transition: 0.3s ease;
+  height: 40px;
+}
+.social-icon:hover {
+  color: var(--highlight-color);
+  scale: 1.2;
 }
