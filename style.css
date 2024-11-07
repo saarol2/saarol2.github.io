@@ -180,93 +180,6 @@ nav a:hover {
   flex-direction: column;
   border-radius: 40px;
   opacity: 80%;
-  /*border: 2px black solid;*/
-}
-
-/*For screens between 800 and 1600 pixels wide*/
-@media (min-width: 800px) and (max-width: 1600px) {
-  .profile-img {
-    margin-left: -10vw;
-  }
-  
-  .UniOulu {
-    margin-right: -10vw;
-  }
-
-  .intro p {
-    width: 200%;
-  }
-}
-
-
-/*For screens less than 800 pixels wide*/
-@media (max-width: 800px) {
-  body {
-    font-size: 1.4rem;
-  }
-  
-  .header {
-    padding: 1rem;
-  }
-
-  .nav a {
-    font-size: 1.6rem;
-    margin-left: 2rem;
-  }
-
-  .hero {
-    height: auto;
-    display: block;
-    text-align: center;
-  }
-
-  .intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    height: auto;
-  }
-
-  .profile-img {
-    margin-right: 0;
-    width: 200px;
-  }
-
-  .intro-content {
-    margin: 0;
-    width: 100%;
-    padding: 10px;
-  }
-
-  .intro h1 {
-    font-size: 2.5rem;
-    margin-bottom: -20px;
-    margin-top: 25px;
-  }
-
-  .intro p {
-    font-size: 1.5rem;
-    background-color: #b74b4b;
-    width: 100%;
-    padding: 10px;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    border-radius: 40%;
-    opacity: 90%;
-  }
-  
-  .UniOulu {
-    margin: 20px auto;
-    width: 100px;
-    height: auto;
-    margin-bottom: -20px;
-  }
-
-  .skills-content {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  }
 }
 
 /*Skills Section*/
@@ -323,6 +236,7 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(125, 12, 231, 0.7);
 }
 
 .about span {
@@ -441,6 +355,10 @@ figcaption {
   transition: background-color 0.5s ease, opacity 0.5s ease;
 }
 
+.upper-part.show .about {
+  text-shadow: 2px 2px 4px rgba(114, 114, 114, 0.7);
+}
+
 .upper-part.show  h2 {
   color: black;
   border-bottom: 3px solid var(--dark-blue);
@@ -463,6 +381,7 @@ figcaption {
   text-align: center;
   min-height: 200px;
   padding-bottom: 50px;
+  text-shadow: 2px 2px 4px rgba(122, 3, 107, 0.7);
 }
 
 .footer h2 {
@@ -495,4 +414,121 @@ figcaption {
 .social-icon:hover {
   color: var(--highlight-color);
   scale: 1.2;
+}
+
+/*Media Queries*/
+
+/*For screens between 800 and 1600 pixels wide*/
+@media (min-width: 800px) and (max-width: 1600px) {
+  .profile-img {
+    margin-left: -10vw;
+  }
+  
+  .UniOulu {
+    margin-right: -10vw;
+  }
+
+  .intro p {
+    width: 200%;
+  }
+}
+
+
+/*For screens less than 800 pixels wide*/
+@media (max-width: 800px) {
+  body {
+    font-size: 1.4rem;
+  }
+  
+  .header {
+    padding: 1rem;
+  }
+
+
+  .finnish-flag, .english-flag {
+    height: 30px;
+  }
+
+  .finnish-flag {
+    width: 48px;
+    margin-right: 5px;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    font-weight: 100;
+    margin: 0 3px;
+  }
+  /*nav a{
+    font-size: 1.8rem;
+    color: var(--text-white);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+  }*/
+
+  .hero {
+    height: auto;
+    display: block;
+    text-align: center;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    position: relative;
+    top: 50px; /* Adjust this value to move it further down */
+  }
+
+  .profile-img {
+    margin-right: 0;
+    width: 200px;
+  }
+
+  .intro-content {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: -20px;
+    margin-top: 25px;
+  }
+
+  .intro p {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  
+  .UniOulu {
+    margin: 20px auto;
+    width: 100px;
+    height: auto;
+    margin-bottom: -20px;
+  }
+
+  .skills-content {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .about-content {
+    max-width: 90%;
+    padding: 0;
+  }
+
+  .projects-content {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 100px;
+  }
+  .project-img {
+    height: 100%;
+    width: 100%;
+  }
 }
