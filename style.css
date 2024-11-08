@@ -120,18 +120,15 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 5%;
 }
 
 .gradient {
-  background: 
-    linear-gradient(
-      to bottom,
-      transparent 25%,
-      var(--dark-blue) 70%
-    ),
-    url('./img/hexagon-bg.jpg');
+  background: var(--dark-blue) url('./img/hexagon-bg.jpg') no-repeat center center;
+  mask-image: linear-gradient(to bottom, black 80%, transparent);
   background-size: cover;
   background-position: center;
+  transition: mask-image 1s ease;
 }
 
 .intro {
@@ -184,6 +181,13 @@ nav a:hover {
 
 /*Skills Section*/
 
+.skills{
+  background-color: transparent;
+  padding-bottom: 50px;
+  font-size: 20px;
+}
+
+
 .skills-title {
   font-size: 4rem;
   text-align: center;
@@ -220,13 +224,6 @@ nav a:hover {
   width: 100px;
   height: auto;
 }
-
-.skills{
-  background-color: transparent;
-  padding-bottom: 50px;
-  font-size: 20px;
-}
-
 /*About Section*/
 
 .about {
@@ -342,18 +339,22 @@ figcaption {
 }
 /*Color transition*/
 
+.gradient.show {
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
 .upper-part {
-  transition: background-color 0.5s ease, opacity 0.5s ease;
-  transition-delay: 0.3s;
+  transition: background-color 1.2s ease;
 }
 
 .upper-part.show {
   background-color: var(--bg-light-grey);
 }
-.upper-part.show .gradient {
-  background: transparent;
-  transition: background-color 0.5s ease, opacity 0.5s ease;
-}
+
+
+
+
+
 
 .upper-part.show .about {
   text-shadow: 2px 2px 4px rgba(114, 114, 114, 0.7);
