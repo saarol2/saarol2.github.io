@@ -464,14 +464,6 @@ figcaption {
     font-weight: 100;
     margin: 0 3px;
   }
-  /*nav a{
-    font-size: 1.8rem;
-    color: var(--text-white);
-    margin-left: 4rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
-  }*/
 
   .hero {
     height: auto;
@@ -529,5 +521,6 @@ figcaption {
 
   .projects-content {
     grid-template-columns: repeat(1, 1fr);
+    padding: 0 5%;
   }
 }
