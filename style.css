@@ -67,6 +67,9 @@ header{
   margin-right: 10px;
 }
 
+.finnish-flag:hover, .english-flag:hover {
+  scale: 1.05;
+}
 
 nav a{
   font-size: 1.8rem;
@@ -438,7 +441,7 @@ figcaption {
 /*For screens less than 800 pixels wide*/
 @media (max-width: 800px) {
   body {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
   
   .header {
@@ -447,11 +450,11 @@ figcaption {
 
 
   .finnish-flag, .english-flag {
-    height: 30px;
+    height: 25px;
   }
 
   .finnish-flag {
-    width: 48px;
+    width: 38px;
     margin-right: 5px;
   }
 
@@ -526,10 +529,5 @@ figcaption {
 
   .projects-content {
     grid-template-columns: repeat(1, 1fr);
-    padding: 0 100px;
-  }
-  .project-img {
-    height: 100%;
-    width: 100%;
   }
 }
