@@ -26,6 +26,8 @@
 html{
   font-size: 62.5%;
   scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+  
 }
 
 body{
@@ -352,17 +354,13 @@ figcaption {
 }
 
 .upper-part {
-  transition: background-color 1.2s ease;
+  transition: background-color 1.6s ease;
+  
 }
 
 .upper-part.show {
   background-color: var(--bg-light-grey);
 }
-
-
-
-
-
 
 .upper-part.show .about {
   text-shadow: 2px 2px 4px rgba(114, 114, 114, 0.7);
@@ -371,10 +369,12 @@ figcaption {
 .upper-part.show  h2 {
   color: black;
   border-bottom: 3px solid var(--dark-blue);
+  transition: color 1.6s ease;
 }
 
 .upper-part.show  p {
   color: black;
+  transition: color 1.6s ease;
 }
 
 .upper-part.show span {
@@ -502,7 +502,7 @@ figcaption {
     width: 90%;
     height: auto;
     position: relative;
-    top: 50px; /* Adjust this value to move it further down */
+    top: 40px;
   }
 
   .profile-img {
@@ -520,6 +520,7 @@ figcaption {
     font-size: 2.5rem;
     margin-bottom: -20px;
     margin-top: 25px;
+    width: 110%;
   }
 
   .intro p {
@@ -540,12 +541,16 @@ figcaption {
   }
 
   .about-content {
-    max-width: 90%;
-    padding: 0;
+    max-width: 95%;
+  }
+  .about-content p {
+    padding: 10px 0;
+    font-size: 95%;
+    margin: 0 -5%;
   }
 
   .projects-content {
     grid-template-columns: repeat(1, 1fr);
-    padding: 0 5%;
+    padding: 0 3%;
   }
 }
